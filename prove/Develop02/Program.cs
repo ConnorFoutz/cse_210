@@ -5,7 +5,11 @@ class Program
     static void Main(string[] args)
     {
         menu mymenu = new menu();
-        Console.WriteLine("Hello Develop02 World!");
+
+        Journal myJournal = new Journal();
+
+
+        Console.WriteLine("Welcome to the Journal!");
         int response = 0;
 
         while (response != 5)
@@ -17,11 +21,13 @@ class Program
             {
                 case 1:
                     Console.WriteLine("Create: ");
+                    myJournal.CreateEntry();
                     //Call CreateJournalENtry
                     break;
                 case 2:
                     Console.WriteLine("Display: ");
                     // Call DisplayJournal
+                    myJournal.DisplayJournal();
                     break;
                 case 3:
                     Console.WriteLine("Save: ");
