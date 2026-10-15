@@ -20,7 +20,6 @@ class Program
             switch(response)
             {
                 case 1:
-                    Console.WriteLine("Create: ");
                     myJournal.CreateEntry();
                     //Call CreateJournalENtry
                     break;
