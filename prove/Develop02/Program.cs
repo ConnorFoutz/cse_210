@@ -7,6 +7,7 @@ class Program
         menu mymenu = new menu();
 
         Journal myJournal = new Journal();
+        string file = "";
 
 
         Console.WriteLine("Welcome to the Journal!");
@@ -29,12 +30,15 @@ class Program
                     myJournal.DisplayJournal();
                     break;
                 case 3:
-                    Console.WriteLine("Save: ");
-                    // Call ReadFromFile()
+                    Console.Write("Save to what file? ");
+                    file = Console.ReadLine();
+                    myJournal.WriteToFile(file);
+                    Console.WriteLine("Saved to file");
                     break;
                 case 4:
-                    Console.WriteLine("Write: ");
-                    // call WriteToFile()
+                    Console.Write("Read from what file? ");
+                    file = Console.ReadLine();
+                    myJournal.ReadFromFile(file);
                     break;
             }
         }
