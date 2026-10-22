@@ -1,7 +1,7 @@
 class Scripture
 {
     private List<Word> _words;
-    // Add cripture reference
+    private Scripture _reference;
 
     public Scripture(string bookName, int chapter, int verse, string text)
     {
@@ -11,7 +11,7 @@ class Scripture
 
     public Scripture(string bookName, int chapter, int startVerse, int endVerse, string text)
     {
-        
+        _words = ConvertToWordList(text);
     }
 
     // Add constructer for scripture reference
