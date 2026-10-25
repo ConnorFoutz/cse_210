@@ -1,20 +1,29 @@
+using System.ComponentModel.DataAnnotations;
+
 class Scripture
 {
     private List<Word> _words;
-    private Scripture _reference;
+    private ScriptureReference _reference;
+
 
     public Scripture(string bookName, int chapter, int verse, string text)
     {
         _words = ConvertToWordList(text);
-        
+        _reference = new ScriptureReference(bookName, chapter, verse);
     }
 
     public Scripture(string bookName, int chapter, int startVerse, int endVerse, string text)
     {
         _words = ConvertToWordList(text);
+        _reference = new ScriptureReference(bookName, chapter, startVerse, endVerse);
     }
 
-    // Add constructer for scripture reference
+    public Scripture(ScriptureReference reference, string text)
+    {
+        _words = ConvertToWordList(text);
+        _reference = reference;
+    }
+
 
     // ConvertToWordList() will recieve a paragraph and split it into words, making a list of class Word.
     private List<Word> ConvertToWordList(string text)
@@ -34,6 +43,45 @@ class Scripture
         foreach (Word w in _words)
         {
             w.DisplayWord();
+        }
+    }
+
+    public string GetScriptureReference()
+    {
+        return _reference.GetScriptureReference();
+    }
+
+    public int GetScriptureLength()
+    {
+        return _words.Count();
+    }
+
+    public int GetNumberHidden()
+    {
+        int i = 0;
+        foreach (Word w in _words)
+        {
+            if(w.IsHidden() == true)
+            {
+                i ++;
+            }
+        }
+        return i;
+    }
+
+    public void HideWords(List<Word> scripture)
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            int randWord = Random.Shared.Next(scripture.Count());
+            if(scripture[randWord].IsHidden() == true)
+            {
+                scripture[randWord].Hide();
+            }
+            else
+            {
+                i = i --;
+            }
         }
     }
 }
