@@ -27,6 +27,7 @@ class Program
         Console.WriteLine($"3. {proverbs.GetScriptureReference()}");
         Console.Write("Which would you like to memorize today? (enter 1, 2 or 3) ");
         choice = int.Parse(Console.ReadLine());
+        Console.Clear();
 
         if(choice == 1)
         {
@@ -35,11 +36,22 @@ class Program
                 string input;
                 Console.WriteLine($"{moses.GetScriptureReference()}");
                 moses.ShowScripture();
-                Console.Write("\nPress  to continue or 'quit' to finish.");
+                Console.Write("\nPress c to continue or 'quit' to finish. ");
                 input = Console.ReadLine();
-                if(input == "")
+                if(input == "c")
                 {
-                    moses.HideWords(moses.);
+                    moses.HideWords();
+                    Console.Clear();
+                }
+                else if(input == "quit")
+                {
+                    Console.Clear();
+                    break;
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("Input not understood. Press enter to continue or 'quit' to finish.");
                 }
 
             }

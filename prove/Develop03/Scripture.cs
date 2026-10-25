@@ -69,18 +69,18 @@ class Scripture
         return i;
     }
 
-    public void HideWords(List<Word> scripture)
+    public void HideWords()
     {
         for (int i = 0; i < 5; i++)
         {
-            int randWord = Random.Shared.Next(scripture.Count());
-            if(scripture[randWord].IsHidden() == true)
+            int randWord = Random.Shared.Next(_words.Count());
+            if(_words[randWord].IsHidden() == false)
             {
-                scripture[randWord].Hide();
+                _words[randWord].Hide();
             }
             else
             {
-                i = i --;
+                i--;
             }
         }
     }
