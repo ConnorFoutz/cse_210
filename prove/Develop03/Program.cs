@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 class Program
 {
@@ -15,9 +16,10 @@ class Program
 
         Scripture mosiah = new Scripture("Mosiah",15,1,"And now Abinadi said unto them: I would that ye should understand that God himself shall come down among the children of men, and shall redeem his people.");
 
-        Scripture proverbs = new Scripture("Proverbs",3,5,6," Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.");
+        Scripture proverbs = new Scripture("Proverbs",3,5,6,"Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.");
 
         int choice;
+        Menu menu = new Menu();
 
 
         Console.WriteLine("Welcome to the Scripture Memorization program!");
@@ -31,30 +33,15 @@ class Program
 
         if(choice == 1)
         {
-            while(moses.GetNumberHidden() < moses.GetScriptureLength())
-            {
-                string input;
-                Console.WriteLine($"{moses.GetScriptureReference()}");
-                moses.ShowScripture();
-                Console.Write("\nPress c to continue or 'quit' to finish. ");
-                input = Console.ReadLine();
-                if(input == "c")
-                {
-                    moses.HideWords();
-                    Console.Clear();
-                }
-                else if(input == "quit")
-                {
-                    Console.Clear();
-                    break;
-                }
-                else
-                {
-                    Console.Clear();
-                    Console.WriteLine("Input not understood. Press enter to continue or 'quit' to finish.");
-                }
-
-            }
+            menu.Display(moses);
+        }
+        else if(choice == 2)
+        {
+            menu.Display(mosiah);
+        }
+        else if(choice == 3)
+        {
+            menu.Display(proverbs);
         }
         
 
