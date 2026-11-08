@@ -34,7 +34,9 @@ class Program
             }
             else if (input == 3)
             {
-                Console.WriteLine("Listing activity");
+                Console.Clear();
+                ListingActivity listing = new ListingActivity();
+                listing.RunActivity();
             }
             else
             {
