@@ -8,8 +8,13 @@ class Police : Person
         _degree = degree;
     }
 
-    public string GetPoliceInfo()
+    public override string GetPersonInfo()
     {
-        return $"weapons: {_weapons}\ndegree: {_degree}\n{GetPersonInfo()}";
+        return $"weapons: {_weapons}\ndegree: {_degree}\n{base.GetPersonInfo()}";
+    }
+
+    public override double GetSalary()
+    {
+        return 150000;
     }
 }

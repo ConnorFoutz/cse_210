@@ -8,8 +8,13 @@ class Doctor : Person
         _degree = degree;
     }
 
-    public string GeDoctorInfo()
+    public override string GetPersonInfo()
     {
-        return $"tools: {_tools}\ndegree: {_degree}\n{GetPersonInfo()}";
+        return $"tools: {_tools}\ndegree: {_degree}\n{base.GetPersonInfo()}";
+    }
+
+    public override double GetSalary()
+    {
+        return 555000;
     }
 }
