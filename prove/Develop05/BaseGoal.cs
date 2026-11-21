@@ -54,6 +54,17 @@
         return $"[{completeString}] Goal: {_name}\nDescription: {_description}\nPoints: {_points}";
     }
 
+    public virtual string GetFileString()
+    {
+        string completeString = " ";
+        if (_complete)
+        {
+            completeString = "X";
+        }
+        //return $"[{completeString}]#Goal: {_name}#Description: {_description}#Points: {_points}";
+        return $"{_complete}#{_name}#{_description}#{_points}";
+    }
+
     public int MarkComplete()
     {
         _complete = true;

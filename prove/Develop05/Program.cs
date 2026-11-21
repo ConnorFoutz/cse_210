@@ -7,12 +7,51 @@ class Program
         // BaseGoal mygoal = new BaseGoal("BaseGoal");
         // Console.WriteLine(mygoal.GetConsoleString());
 
-        SimpleGoal mySimpleGoal = new SimpleGoal();
+        // SimpleGoal mySimpleGoal = new SimpleGoal();
         
-        Console.WriteLine(mySimpleGoal.GetConsoleString());
-        mySimpleGoal.MarkComplete();
-        Console.WriteLine(mySimpleGoal.GetConsoleString());
+        // Console.WriteLine(mySimpleGoal.GetConsoleString());
+        // mySimpleGoal.MarkComplete();
+        // Console.WriteLine(mySimpleGoal.GetConsoleString());
+        Console.Clear();
+        Menu menu = new Menu();
+        int input = 0;
+        while (input != 6)
+        {
+            //Console.Clear();
+            Console.WriteLine("You have some points. \n");
+            menu.DisplayMenu();
+            input = int.Parse(Console.ReadLine());
 
+            if (input == 1)
+            {
+                Console.WriteLine("Create Goal");
+            }
+            else if (input == 2)
+            {
+                Console.WriteLine("List Goals");
+            }
+            else if (input == 3)
+            {
+                Console.WriteLine("Save Goals");
+            }
+            else if (input == 4)
+            {
+                Console.WriteLine("Load Goals");                
+            }
+            else if (input == 5)
+            {
+                Console.WriteLine("Record Event");                
+            }
+            else if (input == 6)
+            {
+                Console.WriteLine("Thanks for playing!");
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Input invalid. Please try again");
+            }
+        }
         
     }
 }
