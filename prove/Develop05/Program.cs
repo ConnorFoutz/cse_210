@@ -14,35 +14,35 @@ class Program
         // Console.WriteLine(mySimpleGoal.GetConsoleString());
         Console.Clear();
         Menu menu = new Menu();
-        int input = 0;
-        while (input != 6)
+        string input = "";
+        while (input != "6")
         {
             //Console.Clear();
             Console.WriteLine("You have some points. \n");
             menu.DisplayMenu();
-            input = int.Parse(Console.ReadLine());
+            input = Console.ReadLine();
 
-            if (input == 1)
+            if (input == "1")
             {
                 Console.WriteLine("Create Goal");
             }
-            else if (input == 2)
+            else if (input == "2")
             {
                 Console.WriteLine("List Goals");
             }
-            else if (input == 3)
+            else if (input == "3")
             {
                 Console.WriteLine("Save Goals");
             }
-            else if (input == 4)
+            else if (input == "4")
             {
                 Console.WriteLine("Load Goals");                
             }
-            else if (input == 5)
+            else if (input == "5")
             {
                 Console.WriteLine("Record Event");                
             }
-            else if (input == 6)
+            else if (input == "6")
             {
                 Console.WriteLine("Thanks for playing!");
                 break;
