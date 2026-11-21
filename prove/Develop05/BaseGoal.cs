@@ -56,11 +56,11 @@
 
     public virtual string GetFileString()
     {
-        string completeString = " ";
-        if (_complete)
-        {
-            completeString = "X";
-        }
+        // string completeString = " ";
+        // if (_complete)
+        // {
+        //     completeString = "X";
+        // }
         //return $"[{completeString}]#Goal: {_name}#Description: {_description}#Points: {_points}";
         return $"{_complete}#{_name}#{_description}#{_points}";
     }

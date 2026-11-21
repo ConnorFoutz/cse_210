@@ -23,8 +23,14 @@ class Program
             input = Console.ReadLine();
 
             if (input == "1")
-            {
-                Console.WriteLine("Create Goal");
+            {  
+                string goal_input = "";
+                menu.GoalMenu();
+                goal_input = Console.ReadLine();
+                if (goal_input == "1")
+                {
+                    SimpleGoal newSimpleGoal = new SimpleGoal();
+                }
             }
             else if (input == "2")
             {
