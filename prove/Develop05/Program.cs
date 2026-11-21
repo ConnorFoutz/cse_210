@@ -14,11 +14,12 @@ class Program
         // Console.WriteLine(mySimpleGoal.GetConsoleString());
         Console.Clear();
         Menu menu = new Menu();
+        Goals goals = new Goals();
         string input = "";
         while (input != "6")
         {
             //Console.Clear();
-            Console.WriteLine("You have some points. \n");
+            Console.WriteLine($"You have {goals.DisplayScore()} points. \n");
             menu.DisplayMenu();
             input = Console.ReadLine();
 
@@ -30,11 +31,20 @@ class Program
                 if (goal_input == "1")
                 {
                     SimpleGoal newSimpleGoal = new SimpleGoal();
+                    goals.AddGoal(newSimpleGoal);
+                }
+                else if (goal_input == "2")
+                {
+                    Console.WriteLine("Eternal Goal");
+                }
+                else
+                {
+                    Console.WriteLine("Checklist Goal");
                 }
             }
             else if (input == "2")
             {
-                Console.WriteLine("List Goals");
+                goals.ListGoals();
             }
             else if (input == "3")
             {
