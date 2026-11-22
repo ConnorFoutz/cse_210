@@ -10,12 +10,21 @@ class Goals
         Console.WriteLine("\nGoals:");
         for (int i = 0; i < _goals.Count(); i++)
         {
-            Console.WriteLine($"1. {_goals[i].GetConsoleString()}");
+            Console.WriteLine($"{i+1}. {_goals[i].GetConsoleString()}");
         }
         // foreach (BaseGoal goal in _goals)
         // {
         //     Console.WriteLine($"\n{goal.GetConsoleString()}");
         // }
+    }
+
+    public void ListGoalsEvent()
+    {
+        Console.WriteLine("\nGoals:");
+        for (int i = 0; i < _goals.Count(); i++)
+        {
+            Console.WriteLine($"{i+1}. {_goals[i].GetName()}");
+        }
     }
 
 
@@ -32,6 +41,11 @@ class Goals
     public void AddGoal(BaseGoal goal)
     {
         _goals.Add(goal);
+    }
+
+    public void RecordEvent(int i)
+    {
+        _goals[i-1].RecordEvent();
     }
 
 }

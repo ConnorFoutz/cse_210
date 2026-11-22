@@ -13,6 +13,7 @@ class EternalGoal : BaseGoal
 
     public override int RecordEvent()
     {
+        Console.WriteLine("Simple Event recorded");
         return GetPoints();
     }
 }

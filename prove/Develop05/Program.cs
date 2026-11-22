@@ -25,7 +25,7 @@ class Program
 
             if (input == "1")
             {  
-                string goal_input = "";
+                string goal_input;
                 menu.GoalMenu();
                 goal_input = Console.ReadLine();
                 if (goal_input == "1")
@@ -58,7 +58,11 @@ class Program
             }
             else if (input == "5")
             {
-                Console.WriteLine("Record Event");                
+                int eventInput;
+                goals.ListGoalsEvent();
+                Console.WriteLine("Which goal did you acomplish? ");
+                eventInput = int.Parse(Console.ReadLine());
+                goals.RecordEvent(eventInput);   
             }
             else if (input == "6")
             {

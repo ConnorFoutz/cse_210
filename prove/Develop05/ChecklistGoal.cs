@@ -41,6 +41,7 @@ class ChecklistGoal : BaseGoal
 
     public override int RecordEvent()
     {
+        Console.WriteLine("Checklist Event recorded");
         return 0;
     }
 }

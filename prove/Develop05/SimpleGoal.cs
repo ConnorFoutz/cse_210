@@ -13,6 +13,7 @@ class SimpleGoal : BaseGoal
 
     public override int RecordEvent()
     {
+        Console.WriteLine("Simple Event recorded");
         return MarkComplete();
     }
 }
