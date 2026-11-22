@@ -8,10 +8,14 @@ class Goals
     public void ListGoals()
     {
         Console.WriteLine("\nGoals:");
-        foreach (BaseGoal goal in _goals)
+        for (int i = 0; i < _goals.Count(); i++)
         {
-            Console.WriteLine($"\n{goal.GetConsoleString()}");
+            Console.WriteLine($"1. {_goals[i].GetConsoleString()}");
         }
+        // foreach (BaseGoal goal in _goals)
+        // {
+        //     Console.WriteLine($"\n{goal.GetConsoleString()}");
+        // }
     }
 
 

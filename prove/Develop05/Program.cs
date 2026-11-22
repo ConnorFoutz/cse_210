@@ -35,7 +35,8 @@ class Program
                 }
                 else if (goal_input == "2")
                 {
-                    Console.WriteLine("Eternal Goal");
+                    EternalGoal newEternalGoal = new EternalGoal();
+                    goals.AddGoal(newEternalGoal);
                 }
                 else
                 {

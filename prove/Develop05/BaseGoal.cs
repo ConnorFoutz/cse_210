@@ -51,7 +51,7 @@
         {
             completeString = "X";
         }
-        return $"[{completeString}] Goal: {_name}\nDescription: {_description}\nPoints: {_points}";
+        return $"[{completeString}] Goal: {_name} ({_description}) ({_points})";
     }
 
     public virtual string GetFileString()
@@ -72,4 +72,9 @@
     }
 
     public abstract int RecordEvent();
+
+    public int GetPoints()
+    {
+        return _points;
+    }
 }
