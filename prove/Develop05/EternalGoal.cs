@@ -13,6 +13,7 @@ class EternalGoal : BaseGoal
 
     public override int RecordEvent()
     {
+        MarkComplete();
         return GetPoints();
     }
 }

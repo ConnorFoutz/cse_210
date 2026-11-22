@@ -41,7 +41,16 @@ class ChecklistGoal : BaseGoal
 
     public override int RecordEvent()
     {
-        Console.WriteLine("Checklist Event recorded");
-        return 0;
+        _iterationsComplete += 1;
+        if (_iterationsComplete == _iterations)
+        {
+            MarkComplete();
+            return _bonus + GetPoints();
+        }
+        else
+        {
+            return GetPoints();
+        }
+        
     }
 }
