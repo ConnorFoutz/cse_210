@@ -47,6 +47,7 @@ class Program
             else if (input == "2")
             {
                 goals.ListGoals();
+                Thread.Sleep(3000);
             }
             else if (input == "3")
             {

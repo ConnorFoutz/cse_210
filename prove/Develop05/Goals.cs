@@ -47,7 +47,7 @@ class Goals
     {
         Console.WriteLine($"Congrats! You just earned {_goals[i-1].RecordEvent()} points!");
         _score += _goals[i-1].RecordEvent();
-        Console.WriteLine($"You now have {_score} points.");
+        //Console.WriteLine($"You now have {_score} points.");
 
 
     }
