@@ -62,7 +62,7 @@
         //     completeString = "X";
         // }
         //return $"[{completeString}]#Goal: {_name}#Description: {_description}#Points: {_points}";
-        return $"{_goalType}#{_complete}#{_name}#{_description}#{_points}";
+        return $"{_goalType}:{_complete}#{_name}#{_description}#{_points}";
     }
 
     public int MarkComplete()

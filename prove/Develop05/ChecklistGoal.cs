@@ -9,9 +9,12 @@ class ChecklistGoal : BaseGoal
         SetIterations();
     }
 
-    public ChecklistGoal(string name, string description, int points, bool complete, string goalType) 
+    public ChecklistGoal(string name, string description, int points, bool complete, string goalType, int iterations, int iterationsComplete, int bonus) 
     : base (name, description, points, complete, goalType)
     {
+        _iterations = iterations;
+        _iterationsComplete = iterationsComplete;
+        _bonus = bonus;
         
     }
 

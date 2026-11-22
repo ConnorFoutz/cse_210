@@ -51,11 +51,13 @@ class Program
             }
             else if (input == "3")
             {
-                Console.WriteLine("Save Goals");
+                Console.Write("What is the filename for the goal file? ");
+                goals.WriteToFile(Console.ReadLine());
             }
             else if (input == "4")
             {
-                Console.WriteLine("Load Goals");                
+                Console.Write("What is the filename for the goal file? ");
+                goals.ReadFromFile(Console.ReadLine());                
             }
             else if (input == "5")
             {
