@@ -60,7 +60,7 @@ class Program
             {
                 int eventInput;
                 goals.ListGoalsEvent();
-                Console.WriteLine("Which goal did you acomplish? ");
+                Console.Write("Which goal did you acomplish? ");
                 eventInput = int.Parse(Console.ReadLine());
                 goals.RecordEvent(eventInput);   
             }
