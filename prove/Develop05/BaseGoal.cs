@@ -51,7 +51,7 @@
         {
             completeString = "X";
         }
-        return $"[{completeString}] Goal: {_name} ({_description}) ({_points})";
+        return $"[{completeString}] Goal: {_name} ({_description})";
     }
 
     public virtual string GetFileString()
@@ -76,5 +76,9 @@
     public int GetPoints()
     {
         return _points;
+    }
+    public bool GetComplete()
+    {
+        return _complete;
     }
 }

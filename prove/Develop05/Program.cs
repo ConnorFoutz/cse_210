@@ -40,7 +40,8 @@ class Program
                 }
                 else
                 {
-                    Console.WriteLine("Checklist Goal");
+                    ChecklistGoal newChecklistGoal = new ChecklistGoal();
+                    goals.AddGoal(newChecklistGoal);
                 }
             }
             else if (input == "2")
